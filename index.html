@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>โปรแกรมประยุกต์และการจัดการข้อมูล · Spatial</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="space" aria-hidden="true">
+    <div class="orb orb--1"></div>
+    <div class="orb orb--2"></div>
+    <div class="orb orb--3"></div>
+    <div class="grid-floor"></div>
+  </div>
+  <div class="light" id="light" aria-hidden="true"></div>
+  <div class="progress"><span class="progress__bar" id="progressBar"></span></div>
+
+  <header class="topbar">
+    <div class="glass-pill topbar__brand">
+      <span class="live"></span>
+      Spatial Deck · App &amp; Data
+    </div>
+    <div class="glass-pill topbar__page" id="slideCount">01 / 05</div>
+  </header>
+
+  <nav class="rail" aria-label="เมนูสไลด์">
+    <button class="rail__item is-active" data-slide="0" aria-label="หน้าปก"></button>
+    <button class="rail__item" data-slide="1" aria-label="หัวข้อที่ 1"></button>
+    <button class="rail__item" data-slide="2" aria-label="หัวข้อที่ 2"></button>
+    <button class="rail__item" data-slide="3" aria-label="หัวข้อที่ 3"></button>
+    <button class="rail__item" data-slide="4" aria-label="สรุป"></button>
+  </nav>
+
+  <main class="deck" id="deck">
+    <!-- 0 Hero -->
+    <section class="slide is-active" data-index="0" aria-label="หน้าปก">
+      <div class="stage stage--hero">
+        <article class="card card--title tilt" data-tilt>
+          <div class="shine" aria-hidden="true"></div>
+          <div class="title-badge">
+            <span class="title-badge__dot"></span>
+            Spatial Presentation
+          </div>
+          <p class="eyebrow accent">ศึกษา 3 หัวข้อ</p>
+          <h1>โปรแกรมประยุกต์<br>และการจัดการข้อมูล</h1>
+          <p class="lead">เชื่อมโยงระบบคอมพิวเตอร์ การสื่อสารระหว่างโปรแกรม และการดูแลข้อมูลบนอุปกรณ์เคลื่อนที่</p>
+          <div class="title-actions">
+            <button class="btn" data-goto="1">เริ่มนำเสนอ <span>→</span></button>
+            <p class="hint">กด ← → หรือเลื่อนเมาส์บนการ์ด</p>
+          </div>
+        </article>
+
+        <div class="hero-stack">
+          <button type="button" class="card card--preview tilt" data-tilt data-goto="1" style="--i:0">
+            <img src="images/distributed-diagram.png" alt="" />
+            <div class="preview-body">
+              <span class="preview-n">01</span>
+              <strong>โปรแกรมประยุกต์ชนิดกระจาย</strong>
+              <p>แบ่งงานทำงานร่วมกันบนหลายเครื่อง</p>
+            </div>
+          </button>
+
+          <button type="button" class="card card--preview tilt" data-tilt data-goto="2" style="--i:1">
+            <img src="images/middleware-diagram.png" alt="" />
+            <div class="preview-body">
+              <span class="preview-n">02</span>
+              <strong>โปรแกรมตัวกลางเชื่อมต่อ</strong>
+              <p>เป็นตัวกลาง/สะพานเชื่อมให้ระบบต่างกันคุยกันได้</p>
+            </div>
+          </button>
+
+          <button type="button" class="card card--preview tilt" data-tilt data-goto="3" style="--i:2">
+            <img src="images/mobile-data.jpg" alt="" />
+            <div class="preview-body">
+              <span class="preview-n">03</span>
+              <strong>การจัดการข้อมูลบนอุปกรณ์เคลื่อนที่</strong>
+              <p>ดูแล เก็บ ซิงค์ และคุ้มครองข้อมูลบนมือถือ</p>
+            </div>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 1 Distributed -->
+    <section class="slide" data-index="1" aria-label="โปรแกรมประยุกต์ชนิดกระจาย">
+      <div class="stage stage--topic">
+        <article class="card card--intro tilt" data-tilt>
+          <p class="eyebrow accent">01 · Distributed Application</p>
+          <h2>โปรแกรมประยุกต์ชนิดกระจาย</h2>
+          <p class="define">โปรแกรมประยุกต์ที่ทำงานร่วมกันผ่านอุปกรณ์คอมพิวเตอร์หลายเครื่อง โดยแต่ละเครื่องอาจรับผิดชอบงานคนละส่วน และเชื่อมต่อกันผ่านเครือข่ายเพื่อแลกเปลี่ยนข้อมูลและทำงานร่วมกัน</p>
+          <div class="meta-grid">
+            <div>
+              <h4>บทบาทหลัก</h4>
+              <p>แบ่งงานทำงานร่วมกันบนหลายเครื่อง</p>
+            </div>
+            <div>
+              <h4>โจทย์สำคัญ</h4>
+              <p>ประสานงานเครือข่าย ความเสถียร และความสอดคล้องของข้อมูล</p>
+            </div>
+          </div>
+        </article>
+
+        <figure class="card card--hero-img tilt" data-tilt>
+          <img src="images/distributed-diagram.png" alt="แผนภาพ Distributed Application" />
+        </figure>
+
+        <article class="card card--list tilt" data-tilt>
+          <h3>ลักษณะการทำงาน</h3>
+          <ol class="steps">
+            <li>แบ่งหน้าที่การทำงานไปยังคอมพิวเตอร์หลายเครื่อง</li>
+            <li>สามารถรับส่งข้อมูลผ่านเครือข่ายได้</li>
+            <li>ช่วยกระจายภาระการทำงาน</li>
+            <li>รองรับผู้ใช้งานหลายคนพร้อมกัน</li>
+          </ol>
+        </article>
+
+        <article class="card card--examples tilt" data-tilt>
+          <h3>ตัวอย่างโปรแกรม</h3>
+          <ul class="ex">
+            <li>Google Docs</li>
+            <li>Facebook</li>
+            <li>ระบบธนาคารออนไลน์</li>
+            <li>ระบบซื้อขายสินค้าออนไลน์</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- 2 Middleware -->
+    <section class="slide" data-index="2" aria-label="โปรแกรมตัวกลางเชื่อมต่อ">
+      <div class="stage stage--topic">
+        <article class="card card--intro tilt" data-tilt>
+          <p class="eyebrow teal">02 · Middleware</p>
+          <h2>โปรแกรมตัวกลางเชื่อมต่อ</h2>
+          <p class="define">โปรแกรมที่ทำหน้าที่เป็นตัวกลางหรือสะพานเชื่อมระหว่างโปรแกรม ระบบ หรืออุปกรณ์ต่าง ๆ เพื่อให้สามารถติดต่อสื่อสาร แลกเปลี่ยนข้อมูล และทำงานร่วมกันได้</p>
+          <div class="meta-grid">
+            <div>
+              <h4>บทบาทหลัก</h4>
+              <p>เป็นตัวกลาง/สะพานเชื่อมให้ระบบต่างกันคุยกันได้</p>
+            </div>
+            <div>
+              <h4>โจทย์สำคัญ</h4>
+              <p>ความเข้ากันได้ของข้อมูล การส่งต่อคำขอ และความปลอดภัย</p>
+            </div>
+          </div>
+        </article>
+
+        <figure class="card card--hero-img tilt" data-tilt>
+          <img src="images/middleware-diagram.png" alt="แผนภาพ Middleware" />
+        </figure>
+
+        <article class="card card--list tilt" data-tilt>
+          <h3>ลักษณะการทำงาน</h3>
+          <ol class="steps">
+            <li>เชื่อมต่อโปรแกรมที่แตกต่างกัน</li>
+            <li>รับส่งและแปลงข้อมูลระหว่างระบบ</li>
+            <li>ช่วยจัดการการสื่อสารระหว่างโปรแกรม</li>
+            <li>เพิ่มความสะดวกในการพัฒนาระบบ</li>
+          </ol>
+        </article>
+
+        <article class="card card--examples tilt" data-tilt>
+          <h3>ตัวอย่างโปรแกรม</h3>
+          <ul class="ex">
+            <li>API Gateway</li>
+            <li>Web Server</li>
+            <li>Message Broker</li>
+            <li>Database Middleware</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- 3 Mobile -->
+    <section class="slide" data-index="3" aria-label="การจัดการข้อมูลในชุดอุปกรณ์เคลื่อนที่">
+      <div class="stage stage--topic">
+        <article class="card card--intro tilt" data-tilt>
+          <p class="eyebrow">03 · Mobile Data Management</p>
+          <h2>การจัดการข้อมูลในชุดอุปกรณ์เคลื่อนที่</h2>
+          <p class="define">การดูแลและจัดการข้อมูลที่อยู่ในอุปกรณ์เคลื่อนที่ เช่น โทรศัพท์มือถือและแท็บเล็ต ให้เป็นระเบียบ ปลอดภัย สามารถจัดเก็บ สำรองข้อมูล และเรียกใช้งานได้อย่างสะดวก</p>
+          <div class="meta-grid">
+            <div>
+              <h4>บทบาทหลัก</h4>
+              <p>ดูแล เก็บ ซิงค์ และคุ้มครองข้อมูลบนมือถือ</p>
+            </div>
+            <div>
+              <h4>โจทย์สำคัญ</h4>
+              <p>การใช้งานออฟไลน์ การซิงค์ข้อมูล และความปลอดภัยเมื่อพกพา</p>
+            </div>
+          </div>
+        </article>
+
+        <figure class="card card--hero-img tilt" data-tilt>
+          <img src="images/mobile-data.jpg" alt="การจัดการข้อมูลบนมือถือ" />
+        </figure>
+
+        <article class="card card--list tilt" data-tilt>
+          <h3>ลักษณะการจัดการข้อมูล</h3>
+          <ol class="steps">
+            <li>จัดเก็บและจัดหมวดหมู่ข้อมูล</li>
+            <li>สำรองข้อมูลเพื่อป้องกันการสูญหาย</li>
+            <li>ป้องกันข้อมูลด้วยรหัสผ่านหรือระบบสแกนลายนิ้วมือ</li>
+            <li>ซิงก์ข้อมูลระหว่างอุปกรณ์</li>
+            <li>ลบหรือกู้คืนข้อมูลเมื่อจำเป็น</li>
+          </ol>
+        </article>
+
+        <article class="card card--examples tilt" data-tilt>
+          <h3>ตัวอย่างโปรแกรม</h3>
+          <ul class="ex">
+            <li>Google Drive</li>
+            <li>iCloud</li>
+            <li>Google Photos</li>
+            <li>OneDrive</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- 4 Summary -->
+    <section class="slide" data-index="4" aria-label="สรุปความสำคัญ">
+      <div class="stage stage--summary">
+        <header class="card card--summary-head tilt" data-tilt>
+          <p class="eyebrow accent">สรุปภาพรวม</p>
+          <h2>หัวข้อ · บทบาทหลัก · โจทย์สำคัญ</h2>
+        </header>
+
+        <div class="summary-board">
+          <article class="card card--topic-sum tilt" data-tilt>
+            <div class="topic-sum__top">
+              <img src="images/distributed-diagram.png" alt="" />
+              <div>
+                <span class="compare__n">01</span>
+                <h3>โปรแกรมประยุกต์ชนิดกระจาย</h3>
+              </div>
+            </div>
+            <div class="topic-sum__block">
+              <h4>บทบาทหลัก</h4>
+              <p>แบ่งงานทำงานร่วมกันบนหลายเครื่อง</p>
+            </div>
+            <div class="topic-sum__block">
+              <h4>โจทย์สำคัญ</h4>
+              <p>ประสานงานเครือข่าย ความเสถียร และความสอดคล้องของข้อมูล</p>
+            </div>
+          </article>
+
+          <article class="card card--topic-sum tilt" data-tilt>
+            <div class="topic-sum__top">
+              <img src="images/middleware-diagram.png" alt="" />
+              <div>
+                <span class="compare__n">02</span>
+                <h3>โปรแกรมตัวกลางเชื่อมต่อ</h3>
+              </div>
+            </div>
+            <div class="topic-sum__block">
+              <h4>บทบาทหลัก</h4>
+              <p>เป็นตัวกลาง/สะพานเชื่อมให้ระบบต่างกันคุยกันได้</p>
+            </div>
+            <div class="topic-sum__block">
+              <h4>โจทย์สำคัญ</h4>
+              <p>ความเข้ากันได้ของข้อมูล การส่งต่อคำขอ และความปลอดภัย</p>
+            </div>
+          </article>
+
+          <article class="card card--topic-sum tilt" data-tilt>
+            <div class="topic-sum__top">
+              <img src="images/mobile-data.jpg" alt="" />
+              <div>
+                <span class="compare__n">03</span>
+                <h3>การจัดการข้อมูลบนอุปกรณ์เคลื่อนที่</h3>
+              </div>
+            </div>
+            <div class="topic-sum__block">
+              <h4>บทบาทหลัก</h4>
+              <p>ดูแล เก็บ ซิงค์ และคุ้มครองข้อมูลบนมือถือ</p>
+            </div>
+            <div class="topic-sum__block">
+              <h4>โจทย์สำคัญ</h4>
+              <p>การใช้งานออฟไลน์ การซิงค์ข้อมูล และความปลอดภัยเมื่อพกพา</p>
+            </div>
+          </article>
+        </div>
+
+        <footer class="card card--takeaway tilt" data-tilt>
+          <p>ประโยชน์โดยรวม — ช่วยให้ระบบคอมพิวเตอร์มีประสิทธิภาพมากขึ้น เชื่อมต่อและแลกเปลี่ยนข้อมูลระหว่างอุปกรณ์ได้อย่างสะดวก รวดเร็ว และปลอดภัย</p>
+          <p class="bye">ขอบคุณที่รับฟัง</p>
+        </footer>
+      </div>
+    </section>
+  </main>
+
+  <div class="pager">
+    <button class="glass-btn" id="prevBtn" aria-label="ก่อนหน้า" disabled>←</button>
+    <button class="glass-btn glass-btn--accent" id="nextBtn" aria-label="ถัดไป">→</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
